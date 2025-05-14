@@ -1,12 +1,34 @@
+import DashboardCard from "@/components/dashboard/DashboardCard";
 import { Button } from "@/components/ui/button";
+import { Folder, MessageCircle, Newspaper } from "lucide-react";
 
 export default function Home() {
   return (
    <>
-   <div>
-    <h1>Dashboard</h1>
-   <Button variant="secondary" size='lg'>Click Me</Button>
-   </div>
+   <div className="flex flex-col md:flex-row justify-between gap-5 mb-5">
+      <DashboardCard 
+      title ="Posts"
+      count={100}
+      icon={<Newspaper className="text-slate-500" size={72} />}
+      />
+
+      <DashboardCard 
+      title ="Categories"
+      count={100}
+      icon={<Folder className="text-slate-500" size={72} />}
+      />
+
+       <DashboardCard 
+      title ="Users"
+      count={1200}
+      icon={<MessageCircle className="text-slate-500" size={72} />}
+      />
+       <DashboardCard 
+      title ="Comments"
+      count={1200}
+      icon={<MessageCircle className="text-slate-500" size={72} />}
+      />
+    </div>
    </>
   );
 }

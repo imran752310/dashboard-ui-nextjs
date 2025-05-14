@@ -11,7 +11,7 @@ import {
   CommandShortcut,
 } from "@/components/ui/command"
 import Link from 'next/link'
-import { LayoutDashboard } from 'lucide-react'
+import { CreditCard, Folders, LayoutDashboard, Newspaper, Settings, User } from 'lucide-react'
 
 const Sidebar = () => {
   return (
@@ -25,14 +25,32 @@ const Sidebar = () => {
         <LayoutDashboard className='mr-2 h-4 w-4 '/>
         <Link href={'/'}>Dashboard</Link>
       </CommandItem>
-      <CommandItem>Search Emoji</CommandItem>
-      <CommandItem>Calculator</CommandItem>
+      <CommandItem>
+        <Newspaper className='mr-2 h-4 w-4 '/>
+        <Link href={'/posts'}>Posts</Link>
+      </CommandItem>
+      <CommandItem>
+        <Folders className='mr-2 h-4 w-4 '/>
+        <Link href={'/'}>Category</Link>
+      </CommandItem>
     </CommandGroup>
     <CommandSeparator />
     <CommandGroup heading="Settings">
-      <CommandItem>Profile</CommandItem>
-      <CommandItem>Billing</CommandItem>
-      <CommandItem>Settings</CommandItem>
+      <CommandItem>
+        <User className='mr-2 h-4 w-4 '/>
+        <Link href={'/posts'}>Profile</Link>
+        <CommandShortcut>XP</CommandShortcut>
+      </CommandItem>
+      <CommandItem>
+         <CreditCard className='mr-2 h-4 w-4 '/>
+        <Link href={'/posts'}>Billing</Link>
+        <CommandShortcut>XB</CommandShortcut>
+      </CommandItem>
+      <CommandItem>
+         <Settings className='mr-2 h-4 w-4 '/>
+        <Link href={'/posts'}>Settings</Link>
+        <CommandShortcut>XS</CommandShortcut>
+      </CommandItem>
     </CommandGroup>
   </CommandList>
 </Command>
