@@ -16,7 +16,7 @@ import { CreditCard, Folders, LayoutDashboard, Newspaper, Settings, User } from 
 const Sidebar = () => {
   return (
     <div>
-        <Command className='bg-secondary rounded-none'>
+        <Command className=' rounded-none h-[100vh]'>
   <CommandInput placeholder="Type a command or search..." />
   <CommandList>
     <CommandEmpty>No results found.</CommandEmpty>
@@ -39,17 +39,17 @@ const Sidebar = () => {
       <CommandItem>
         <User className='mr-2 h-4 w-4 '/>
         <Link href={'/posts'}>Profile</Link>
-        <CommandShortcut>XP</CommandShortcut>
+      
       </CommandItem>
       <CommandItem>
          <CreditCard className='mr-2 h-4 w-4 '/>
         <Link href={'/posts'}>Billing</Link>
-        <CommandShortcut>XB</CommandShortcut>
+      
       </CommandItem>
       <CommandItem>
          <Settings className='mr-2 h-4 w-4 '/>
         <Link href={'/posts'}>Settings</Link>
-        <CommandShortcut>XS</CommandShortcut>
+       
       </CommandItem>
     </CommandGroup>
   </CommandList>
