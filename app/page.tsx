@@ -1,3 +1,4 @@
+import AnalyticsChart from "@/components/dashboard/AnalyticsChart";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import PostsTable from "@/components/posts/PostsTable";
 import { Button } from "@/components/ui/button";
@@ -30,6 +31,7 @@ export default function Home() {
       icon={<MessageCircle className="text-slate-500" size={72} />}
       />
     </div>
+    <AnalyticsChart />
     <PostsTable title="Latest Posts" />
    </>
   );
