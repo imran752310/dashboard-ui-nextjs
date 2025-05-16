@@ -43,7 +43,7 @@ const PostsTable = ({limit, title}: PostsTableProps) => {
                             <TableCell className='hidden md:table-cell'>{post.date}</TableCell>
                             <TableCell>
                                 <Link href={`/posts/edit/${post.id}`}>
-                                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Edit</button>
+                                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 cursor-pointer px-4 rounded'>Edit</button>
                                 </Link>
                             </TableCell>
                     </TableRow>
