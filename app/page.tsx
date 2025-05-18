@@ -1,3 +1,4 @@
+import AnalyticCricle from "@/components/dashboard/AnalyticCircle";
 import AnalyticsChart from "@/components/dashboard/AnalyticsChart";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import PostsTable from "@/components/posts/PostsTable";
@@ -28,7 +29,15 @@ export default function Home() {
       icon={<MessageCircle className="text-green-900 bg-green-100 p-2 rounded-md" size={52} />}
       />
     </div>
-    <AnalyticsChart />
+    <div className="flex py-5 gap-4">
+      <div className="w-2/3">
+         <AnalyticsChart />
+      </div>
+      <div className="w-1/3">
+      <AnalyticCricle />
+      </div>
+    </div>
+   
     <PostsTable title="Latest Posts" />
    </>
   );

@@ -15,4 +15,5 @@ const data: AnalyticsItem[] = [
   { name: "Dec", uv: 1800, pv: 4200, amt: 3300 },
 ];
 
-export default data
+export default data;
+

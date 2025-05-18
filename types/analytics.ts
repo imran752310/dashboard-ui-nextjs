@@ -4,3 +4,9 @@ export interface AnalyticsItem {
     pv: number;
     amt: number;
 }
+
+
+export interface PieData  {
+  name: string;
+  value: number;
+};
