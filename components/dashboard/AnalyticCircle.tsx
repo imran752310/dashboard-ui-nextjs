@@ -49,7 +49,7 @@ const renderCustomizedLabel = ({
 export default function AnalyticCircle() {
   return (
    <div>
-     <PieChart width={400} height={400} className='shadow rounded-md'>
+     <PieChart width={400} height={400} className='shadow-lg rounded-lg'>
       <Pie
         data={dataCircle as PieData[]}
         cx={200}
