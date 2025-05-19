@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {LucideIcon, MoveRight } from "lucide-react";
+import Link from "next/link";
 
 interface DashboardCardProps {
   title: string;
@@ -24,7 +25,7 @@ const DashboardCard = ({ title, count, icon }: DashboardCardProps) => {
             </div>
           </div>
           <div className="border-t mt-4 pt-4">
-                <button className="flex gap-2 items-center cursor-pointer">View Details <MoveRight size={20}/></button> 
+                <Link href={'/posts'} className="flex gap-2 items-center p-2 rounded cursor-pointer hover:bg-slate-300 hover:text-white">View Details <MoveRight size={20}/></Link> 
           </div>
         </CardContent>
       </Card>
