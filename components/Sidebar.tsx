@@ -16,7 +16,7 @@ import { CreditCard, Folders, LayoutDashboard, Newspaper, Settings, User } from 
 const Sidebar = () => {
   return (
     <div>
-        <Command className='bg-slate-100 rounded-none h-[100vh]'>
+        <Command className='bg-slate-300 rounded-none h-[100vh] dark:bg-slate-700'>
   <CommandInput placeholder="Type a command or search..." />
   <CommandList>
     <CommandEmpty>No results found.</CommandEmpty>
