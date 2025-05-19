@@ -5,9 +5,9 @@ import React from 'react'
 
 const Post = () => {
   return (
-    <div>
+    <div className='w-full'>
       <Backbutton text={'All Posts'} link={'/'} />
-      <div>
+      <div className='my-5'>
         <PostsTable title={''} />
       </div>
       <PostPagination />
