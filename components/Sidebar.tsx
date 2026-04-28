@@ -1,14 +1,12 @@
 import React from 'react'
 import {
   Command,
-  CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command"
 import Link from 'next/link'
 import { CreditCard, Folders, LayoutDashboard, Newspaper, Settings, User } from 'lucide-react'

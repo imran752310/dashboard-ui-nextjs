@@ -34,13 +34,14 @@ const formSchema = z.object({
 });
 
 interface PostEditPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 const PostEditPage = ({ params }: PostEditPageProps) => {
-  const post = posts.find((post) => post.id === params.id);
+  const { id } = React.use(params);
+  const post = posts.find((post) => post.id === id);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,7 +53,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof formSchema>) => {
+  const handleSubmit = () => {
     toast(`Post Edit Succeffly by ${post?.author} and ${post?.title}`);
   };
 

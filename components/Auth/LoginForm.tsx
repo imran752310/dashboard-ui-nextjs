@@ -1,5 +1,4 @@
 "use client";
-import Backbutton from "@/components/Backbutton";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -44,7 +43,7 @@ const LoginForm = () => {
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof formSchema>) => {
+  const handleSubmit = () => {
    router.push('/')
   };
 

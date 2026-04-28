@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/table"
 import Link from 'next/link'
 import posts from '@/data/posts'
-import { Post } from '@/types/post'
 
 interface PostsTableProps {
     limit?: number;
@@ -36,7 +35,7 @@ const PostsTable = ({limit, title}: PostsTableProps) => {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {posts.map((post)=>(
+                {(limit ? posts.slice(0, limit) : posts).map((post)=>(
                     <TableRow key={post.id}>
                             <TableCell>{post.title}</TableCell>
                             <TableCell className='hidden md:table-cell'>{post.author}</TableCell>
